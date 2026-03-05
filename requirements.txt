@@ -7,4 +7,3 @@ geopandas
 shapely
 pyproj
 matplotlib
-statsmodels
