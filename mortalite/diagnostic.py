@@ -45,11 +45,22 @@ FRAMBOISE = "#A13D63"
 def get_intensite_globale():
 
     # ---------------------------
-    # Chargement local
+    # Chargement du fichier
     # ---------------------------
+    BASE_DIR = Path(__file__).resolve().parents[1]
+    DATA_DIR = BASE_DIR / "data"
 
-    df = pd.read_csv("mortalite_2023_standardise_all.csv")
+    path = DATA_DIR / "mortalite_2023_standardise_all.csv"
 
+    if not path.exists():
+        st.error(f"Fichier manquant : {path}")
+        st.stop()
+
+    df = pd.read_csv(path)
+
+    # ---------------------------
+    # Transformation des données
+    # ---------------------------
     df = (
         df[df["annee"] == 2023]
         .query("sexe == 'Tous sexes'")
@@ -71,7 +82,7 @@ def render_diagnostic():
 
     df = get_intensite_globale()
 
-        # Remplacement des codes départements par les noms
+    # Remplacement des codes départements par les noms
     df["departement_nom"] = (
         df["departement"]
         .astype(str)
