@@ -3,8 +3,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.set_page_config(layout="wide")
-
 DEPARTEMENTS_OCCITANIE = [
     "09","11","12","30","31","32","34",
     "46","48","65","66","81","82"
