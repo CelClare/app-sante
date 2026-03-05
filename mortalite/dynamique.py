@@ -54,8 +54,8 @@ def style_fig(fig):
 
 @st.cache_data
 def load_data():
-    BASE_DIR = Path(__file__).resolve().parents[2]
-    DATA_PROCESSED = BASE_DIR / "data" / "processed"
+    BASE_DIR = Path(__file__).resolve().parents[1]
+    DATA_PROCESSED = BASE_DIR / "data" 
     path = DATA_PROCESSED / "toutes_causes.csv"
 
     if not path.exists():
@@ -66,8 +66,8 @@ def load_data():
 
 @st.cache_data
 def load_detail():
-    BASE_DIR = Path(__file__).resolve().parents[2]
-    DATA_PROCESSED = BASE_DIR / "data" / "processed"
+    BASE_DIR = Path(__file__).resolve().parents[1]
+    DATA_PROCESSED = BASE_DIR / "data" 
     path = DATA_PROCESSED / "mortalite_standardise_2010-2023.csv"
 
     if not path.exists():
