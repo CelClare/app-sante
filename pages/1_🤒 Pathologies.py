@@ -66,13 +66,7 @@ with tab1:
 
     st.pyplot(fig)
 
-    st.write("""
-
-- Le diabète et les maladies respiratoires -> Un enjeu majeur de santé publique dans le département Haute-Garonne 
-- Les maladies cardioneurovasculaires, les cancers, les maladies neurologiques et les maladies psychiatriques -> position intermédiaire,              
-
-""")
-
+   
 ###################visualiser les tranches d'ages des personnes plus vulnerables face aux maladies respiratoires ###########
 # 1. Filtrer pour l'année 2023, le département 31 et la pathologie spécifique
 # Note : Vérifiez bien que le nom correspond exactement à celui de votre colonne 'patho_niv1'
@@ -121,15 +115,7 @@ with tab3:
     plt.tight_layout()
 
     st.pyplot(fig)
-    st.write("""
-
-    Protection de la population sensible:                                                               
-    
-    -Renforcer la surveillance et la prévention chez les 0-4 ans (crèches, pédiatrie, qualité de l'air intérieur).
-
-    -Adapter les stratégies de prise en charge pour les 80 ans et plus, population la plus vulnérable.
-
-    """)
+   
     
     
 
@@ -204,12 +190,6 @@ with tab2:
     plt.tight_layout()
     st.pyplot(fig, use_container_width=True)
     
-    st.write("""
-
-    - une prédominance constante du diabète et des maladies respiratoires chroniques entre les deux territoires
-
-    **Conclusion :**
-    --> nécessité de renforcer les actions de prévention, de dépistage et de prise en charge ciblées sur ces pathologies prioritaires au niveau regional et départemental.
-    """)
+  
     
     
